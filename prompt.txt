@@ -1,0 +1,24 @@
+I'm building a website called "Finance Principles" that teaches first-principles concepts in Finance, Accounting, and Taxation, paired with interactive calculators. Set it up as follows:
+
+TECH STACK: Next.js (App Router) + TypeScript + Tailwind CSS. Deployable to Vercel.
+
+SITE STRUCTURE:
+- / → Homepage with search and browse-by-pillar (Finance / Accounting / Taxation / Calculators)
+- /finance/[topic] → Finance concept pages
+- /accounting/[topic] → Accounting concept pages
+- /taxation/[topic] → Taxation concept pages (see note below — these need a country selector)
+- /calculators/[tool] → Interactive calculators
+- /glossary → Searchable list of all terms (build this later, skip for now)
+
+SHARED COMPONENTS:
+1. ConceptPage layout with sections: plain-English definition, "why this exists" (first-principles explanation), formula/mechanics, one worked numerical example, common misconceptions, links to related concepts, and a link to a related calculator if one exists.
+2. CalculatorPage layout: input fields on one side, a live-updating result on the other, and a plain-language explanation of the math below the calculator.
+3. For taxation specifically: ConceptPage should support an optional country selector (toggle between US / UK / India / EU-generic) that swaps in country-specific detail while the core principle text stays shared and doesn't repeat per country.
+
+FIRST BUILD TASKS (do these first, then stop for my review before generating more pages):
+1. Scaffold the project with the routing and layout components above.
+2. Build ONE complete finance concept page: Compound Interest (using the ConceptPage layout).
+3. Build ONE complete calculator: Compound Interest Calculator (using the CalculatorPage layout), with correct compounding math (support annual/monthly/daily compounding frequency).
+4. Build ONE taxation concept page: Marginal vs Effective Tax Rate, using the country-selector pattern, with illustrative (not authoritative) bracket data for US, UK, and India, and a visible disclaimer that rates are illustrative and should be verified.
+
+Set up the project,
